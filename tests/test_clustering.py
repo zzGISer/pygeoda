@@ -16,28 +16,28 @@ class TestSpatialClustering(unittest.TestCase):
         k = 4
         clusters = pygeoda.skater(k, self.queen_w, self.data)
         betweenss = pygeoda.between_sumofsquare(clusters, self.data)
-        totalss = total_sumofsquare( self.data)
+        totalss = pygeoda.total_sumofsquare( self.data)
         ratio =  betweenss / totalss
 
-        self.assertEqual(ratio, 0.3156446659311204)
+        self.assertEqual(ratio, 0.3156446659311205)
 
     def test_REDCAP(self):
         k = 4
-        clusters = pygeoda.redcap(k, sel.queen_w, self.data, "fullorder-completelinkage")
+        clusters = pygeoda.redcap(k, self.queen_w, self.data, "fullorder-completelinkage")
         betweenss = pygeoda.between_sumofsquare(clusters, self.data)
-        totalss = total_sumofsquare( self.data)
+        totalss = pygeoda.total_sumofsquare( self.data)
         ratio =  betweenss / totalss
 
         self.assertEqual(ratio, 0.1905641377254551)
 
-    def test_REDCAP(self):
+    def test_MAXP(self):
         method = "greedy"
         clusters = pygeoda.maxp(self.queen_w, self.data, self.bound_vals, self.min_bound, method)
         betweenss = pygeoda.between_sumofsquare(clusters, self.data)
-        totalss = total_sumofsquare( self.data)
+        totalss = pygeoda.total_sumofsquare( self.data)
         ratio =  betweenss / totalss
 
-        self.assertEqual(ratio, 0.507018079733202)
+        self.assertEqual(ratio, 0.5020739031174454)
 
 if __name__ == '__main__':
     unittest.main()
