@@ -5,7 +5,7 @@ __author__ = "Xun Li <lixun910@gmail.com>, "
 
 class TestSpatialClustering(unittest.TestCase):
     def setUp(self):
-        self.guerry = pygeoda.open("../data/Guerry.shp")
+        self.guerry = pygeoda.open("./data/Guerry.shp")
         self.queen_w = pygeoda.weights.queen(self.guerry)
         select_vars = ["Crm_prs", "Crm_prp", "Litercy", "Donatns", "Infants", "Suicids"]
         self.data = [self.guerry.GetRealCol(v) for v in select_vars]
@@ -38,3 +38,6 @@ class TestSpatialClustering(unittest.TestCase):
         ratio =  betweenss / totalss
 
         self.assertEqual(ratio, 0.507018079733202)
+
+if __name__ == '__main__':
+    unittest.main()

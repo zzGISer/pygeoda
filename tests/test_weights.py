@@ -5,8 +5,8 @@ __author__ = "Xun Li <lixun910@gmail.com>, "
 
 class TestWeights(unittest.TestCase):
     def setUp(self):
-        self.guerry = pygeoda.open("../data/Guerry.shp")
-        self.nat = pygeoda.open("../data/natregimes.shp")
+        self.guerry = pygeoda.open("./data/Guerry.shp")
+        self.nat = pygeoda.open("./data/natregimes.shp")
 
     def test_queen_weights(self):
         w = pygeoda.weights.queen(self.guerry)

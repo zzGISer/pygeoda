@@ -5,7 +5,7 @@ __author__ = "Xun Li <lixun910@gmail.com>, "
 
 class TestAlgorithms(unittest.TestCase):
     def setUp(self):
-        self.guerry = pygeoda.open("../data/Guerry.shp")
+        self.guerry = pygeoda.open("./data/Guerry.shp")
         self.queen_w = pygeoda.weights.queen(self.guerry)
         self.crm_prp = guerry.GetIntegerCol("Crm_prp")
         select_vars = ["Crm_prs", "Crm_prp", "Litercy", "Donatns", "Infants", "Suicids"]
