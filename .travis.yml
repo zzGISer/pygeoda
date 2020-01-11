@@ -11,6 +11,7 @@ python:
 
 before_install:
   - git submodule foreach git pull origin master
+  - pip install nose2
 
 # command to install dependencies
 install:
