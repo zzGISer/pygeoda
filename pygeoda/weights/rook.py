@@ -21,8 +21,8 @@ def rook(geoda_obj, **kwargs):
     order = 1 if 'order' not in kwargs else kwargs['order']
     include_lower_order = False if 'include_lower_order' not in kwargs else kwargs['include_lower_order']
     precision_threshold = 0.0 if 'precision_threshold' not in kwargs else kwargs['precision_threshold']
-    poly_id = ""
-    gda_w = gda_rook_weights(geoda_obj.gda, poly_id, order, include_lower_order, precision_threshold)
+    
+    gda_w = gda_rook_weights(geoda_obj.gda, order, include_lower_order, precision_threshold)
 
     return Weight(gda_w)
 

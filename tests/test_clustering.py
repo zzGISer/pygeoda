@@ -19,7 +19,7 @@ class TestSpatialClustering(unittest.TestCase):
         totalss = pygeoda.total_sumofsquare( self.data)
         ratio =  betweenss / totalss
 
-        self.assertEqual(ratio, 0.3156446659311205)
+        self.assertAlmostEqual(ratio, 0.3156446659311205)
 
     def test_REDCAP(self):
         k = 4
@@ -28,7 +28,7 @@ class TestSpatialClustering(unittest.TestCase):
         totalss = pygeoda.total_sumofsquare( self.data)
         ratio =  betweenss / totalss
 
-        self.assertEqual(ratio, 0.1905641377254551)
+        self.assertEqual(ratio, 0.25712705781933565)
 
     def test_MAXP(self):
         method = "greedy"
