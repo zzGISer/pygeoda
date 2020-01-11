@@ -2,6 +2,7 @@
 
 pygeoda is a python library for spatial data analysis based on libgeoda and GeoDa.
 
+[![Build Status](https://travis-ci.com/GeoDaCenter/pygeoda.svg?branch=master)](https://travis-ci.com/GeoDaCenter/pygeoda)
 
 ## version 0.0.4
 
