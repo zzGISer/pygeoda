@@ -15,8 +15,11 @@ before_install:
 
 # command to install dependencies
 install:
-  - python setup.py build_ext
+  - python setup.py build_ext --inplace
+  - mv pygeoda/_libgeoda.*.so pygeoda/_libgeoda.so
+
 # command to run tests
 script:
 #  - pytest
+  - ls ./pygeoda/
   - python -m nose2
