@@ -1,7 +1,7 @@
 ---
 name: Add Feature
 about: Template for adding a new feature for a project
-title: ''
+title: "[NewFeature]"
 labels: enhancement
 assignees: ''
 
