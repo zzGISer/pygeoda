@@ -42606,7 +42606,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_gda_naturalbreaks(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_gda_naturalbreaks__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   int arg1 ;
   std::vector< double,std::allocator< double > > *arg2 = 0 ;
@@ -42616,10 +42616,9 @@ SWIGINTERN PyObject *_wrap_gda_naturalbreaks(PyObject *SWIGUNUSEDPARM(self), PyO
   int res2 = SWIG_OLDOBJ ;
   void *argp3 = 0 ;
   int res3 = 0 ;
-  PyObject *swig_obj[3] ;
   std::vector< double,std::allocator< double > > result;
   
-  if (!SWIG_Python_UnpackTuple(args, "gda_naturalbreaks", 3, 3, swig_obj)) SWIG_fail;
+  if ((nobjs < 3) || (nobjs > 3)) SWIG_fail;
   ecode1 = SWIG_AsVal_int(swig_obj[0], &val1);
   if (!SWIG_IsOK(ecode1)) {
     SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "gda_naturalbreaks" "', argument " "1"" of type '" "int""'");
@@ -42636,17 +42635,17 @@ SWIGINTERN PyObject *_wrap_gda_naturalbreaks(PyObject *SWIGUNUSEDPARM(self), PyO
     }
     arg2 = ptr;
   }
-  res3 = SWIG_ConvertPtr(swig_obj[2], &argp3, SWIGTYPE_p_std__vectorT_bool_std__allocatorT_bool_t_t,  0 );
+  res3 = SWIG_ConvertPtr(swig_obj[2], &argp3, SWIGTYPE_p_std__vectorT_bool_std__allocatorT_bool_t_t,  0  | 0);
   if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "gda_naturalbreaks" "', argument " "3"" of type '" "std::vector< bool,std::allocator< bool > > &""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "gda_naturalbreaks" "', argument " "3"" of type '" "std::vector< bool,std::allocator< bool > > const &""'"); 
   }
   if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_naturalbreaks" "', argument " "3"" of type '" "std::vector< bool,std::allocator< bool > > &""'"); 
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_naturalbreaks" "', argument " "3"" of type '" "std::vector< bool,std::allocator< bool > > const &""'"); 
   }
   arg3 = reinterpret_cast< std::vector< bool,std::allocator< bool > > * >(argp3);
   {
     SWIG_PYTHON_THREAD_BEGIN_ALLOW;
-    result = gda_naturalbreaks(arg1,(std::vector< double,std::allocator< double > > const &)*arg2,*arg3);
+    result = gda_naturalbreaks(arg1,(std::vector< double,std::allocator< double > > const &)*arg2,(std::vector< bool,std::allocator< bool > > const &)*arg3);
     SWIG_PYTHON_THREAD_END_ALLOW;
   }
   resultobj = swig::from(static_cast< std::vector< double,std::allocator< double > > >(result));
@@ -42658,7 +42657,97 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_gda_guantilebreaks(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_gda_naturalbreaks__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  int arg1 ;
+  std::vector< double,std::allocator< double > > *arg2 = 0 ;
+  int val1 ;
+  int ecode1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  std::vector< double,std::allocator< double > > result;
+  
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  ecode1 = SWIG_AsVal_int(swig_obj[0], &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "gda_naturalbreaks" "', argument " "1"" of type '" "int""'");
+  } 
+  arg1 = static_cast< int >(val1);
+  {
+    std::vector< double,std::allocator< double > > *ptr = (std::vector< double,std::allocator< double > > *)0;
+    res2 = swig::asptr(swig_obj[1], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gda_naturalbreaks" "', argument " "2"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_naturalbreaks" "', argument " "2"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    arg2 = ptr;
+  }
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    result = gda_naturalbreaks(arg1,(std::vector< double,std::allocator< double > > const &)*arg2);
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = swig::from(static_cast< std::vector< double,std::allocator< double > > >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gda_naturalbreaks(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[4] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "gda_naturalbreaks", 0, 3, argv))) SWIG_fail;
+  --argc;
+  if (argc == 2) {
+    int _v;
+    {
+      int res = SWIG_AsVal_int(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      int res = swig::asptr(argv[1], (std::vector< double,std::allocator< double > >**)(0));
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_gda_naturalbreaks__SWIG_1(self, argc, argv);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      int res = SWIG_AsVal_int(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      int res = swig::asptr(argv[1], (std::vector< double,std::allocator< double > >**)(0));
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        int res = SWIG_ConvertPtr(argv[2], 0, SWIGTYPE_p_std__vectorT_bool_std__allocatorT_bool_t_t, SWIG_POINTER_NO_NULL | 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_gda_naturalbreaks__SWIG_0(self, argc, argv);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'gda_naturalbreaks'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    gda_naturalbreaks(int,std::vector< double,std::allocator< double > > const &,std::vector< bool,std::allocator< bool > > const &)\n"
+    "    gda_naturalbreaks(int,std::vector< double,std::allocator< double > > const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_gda_guantilebreaks__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   int arg1 ;
   std::vector< double,std::allocator< double > > *arg2 = 0 ;
@@ -42668,10 +42757,9 @@ SWIGINTERN PyObject *_wrap_gda_guantilebreaks(PyObject *SWIGUNUSEDPARM(self), Py
   int res2 = SWIG_OLDOBJ ;
   void *argp3 = 0 ;
   int res3 = 0 ;
-  PyObject *swig_obj[3] ;
   std::vector< double,std::allocator< double > > result;
   
-  if (!SWIG_Python_UnpackTuple(args, "gda_guantilebreaks", 3, 3, swig_obj)) SWIG_fail;
+  if ((nobjs < 3) || (nobjs > 3)) SWIG_fail;
   ecode1 = SWIG_AsVal_int(swig_obj[0], &val1);
   if (!SWIG_IsOK(ecode1)) {
     SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "gda_guantilebreaks" "', argument " "1"" of type '" "int""'");
@@ -42688,17 +42776,17 @@ SWIGINTERN PyObject *_wrap_gda_guantilebreaks(PyObject *SWIGUNUSEDPARM(self), Py
     }
     arg2 = ptr;
   }
-  res3 = SWIG_ConvertPtr(swig_obj[2], &argp3, SWIGTYPE_p_std__vectorT_bool_std__allocatorT_bool_t_t,  0 );
+  res3 = SWIG_ConvertPtr(swig_obj[2], &argp3, SWIGTYPE_p_std__vectorT_bool_std__allocatorT_bool_t_t,  0  | 0);
   if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "gda_guantilebreaks" "', argument " "3"" of type '" "std::vector< bool,std::allocator< bool > > &""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "gda_guantilebreaks" "', argument " "3"" of type '" "std::vector< bool,std::allocator< bool > > const &""'"); 
   }
   if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_guantilebreaks" "', argument " "3"" of type '" "std::vector< bool,std::allocator< bool > > &""'"); 
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_guantilebreaks" "', argument " "3"" of type '" "std::vector< bool,std::allocator< bool > > const &""'"); 
   }
   arg3 = reinterpret_cast< std::vector< bool,std::allocator< bool > > * >(argp3);
   {
     SWIG_PYTHON_THREAD_BEGIN_ALLOW;
-    result = gda_guantilebreaks(arg1,(std::vector< double,std::allocator< double > > const &)*arg2,*arg3);
+    result = gda_guantilebreaks(arg1,(std::vector< double,std::allocator< double > > const &)*arg2,(std::vector< bool,std::allocator< bool > > const &)*arg3);
     SWIG_PYTHON_THREAD_END_ALLOW;
   }
   resultobj = swig::from(static_cast< std::vector< double,std::allocator< double > > >(result));
@@ -42710,47 +42798,35 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_gda_hinge15breaks(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_gda_guantilebreaks__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   int arg1 ;
   std::vector< double,std::allocator< double > > *arg2 = 0 ;
-  std::vector< bool,std::allocator< bool > > *arg3 = 0 ;
   int val1 ;
   int ecode1 = 0 ;
   int res2 = SWIG_OLDOBJ ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
-  PyObject *swig_obj[3] ;
   std::vector< double,std::allocator< double > > result;
   
-  if (!SWIG_Python_UnpackTuple(args, "gda_hinge15breaks", 3, 3, swig_obj)) SWIG_fail;
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
   ecode1 = SWIG_AsVal_int(swig_obj[0], &val1);
   if (!SWIG_IsOK(ecode1)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "gda_hinge15breaks" "', argument " "1"" of type '" "int""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "gda_guantilebreaks" "', argument " "1"" of type '" "int""'");
   } 
   arg1 = static_cast< int >(val1);
   {
     std::vector< double,std::allocator< double > > *ptr = (std::vector< double,std::allocator< double > > *)0;
     res2 = swig::asptr(swig_obj[1], &ptr);
     if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gda_hinge15breaks" "', argument " "2"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gda_guantilebreaks" "', argument " "2"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
     }
     if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_hinge15breaks" "', argument " "2"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_guantilebreaks" "', argument " "2"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
     }
     arg2 = ptr;
   }
-  res3 = SWIG_ConvertPtr(swig_obj[2], &argp3, SWIGTYPE_p_std__vectorT_bool_std__allocatorT_bool_t_t,  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "gda_hinge15breaks" "', argument " "3"" of type '" "std::vector< bool,std::allocator< bool > > &""'"); 
-  }
-  if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_hinge15breaks" "', argument " "3"" of type '" "std::vector< bool,std::allocator< bool > > &""'"); 
-  }
-  arg3 = reinterpret_cast< std::vector< bool,std::allocator< bool > > * >(argp3);
   {
     SWIG_PYTHON_THREAD_BEGIN_ALLOW;
-    result = gda_hinge15breaks(arg1,(std::vector< double,std::allocator< double > > const &)*arg2,*arg3);
+    result = gda_guantilebreaks(arg1,(std::vector< double,std::allocator< double > > const &)*arg2);
     SWIG_PYTHON_THREAD_END_ALLOW;
   }
   resultobj = swig::from(static_cast< std::vector< double,std::allocator< double > > >(result));
@@ -42762,159 +42838,505 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_gda_hinge30breaks(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_gda_guantilebreaks(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[4] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "gda_guantilebreaks", 0, 3, argv))) SWIG_fail;
+  --argc;
+  if (argc == 2) {
+    int _v;
+    {
+      int res = SWIG_AsVal_int(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      int res = swig::asptr(argv[1], (std::vector< double,std::allocator< double > >**)(0));
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_gda_guantilebreaks__SWIG_1(self, argc, argv);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      int res = SWIG_AsVal_int(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      int res = swig::asptr(argv[1], (std::vector< double,std::allocator< double > >**)(0));
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        int res = SWIG_ConvertPtr(argv[2], 0, SWIGTYPE_p_std__vectorT_bool_std__allocatorT_bool_t_t, SWIG_POINTER_NO_NULL | 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_gda_guantilebreaks__SWIG_0(self, argc, argv);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'gda_guantilebreaks'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    gda_guantilebreaks(int,std::vector< double,std::allocator< double > > const &,std::vector< bool,std::allocator< bool > > const &)\n"
+    "    gda_guantilebreaks(int,std::vector< double,std::allocator< double > > const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_gda_hinge15breaks__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
-  int arg1 ;
-  std::vector< double,std::allocator< double > > *arg2 = 0 ;
-  std::vector< bool,std::allocator< bool > > *arg3 = 0 ;
-  int val1 ;
-  int ecode1 = 0 ;
-  int res2 = SWIG_OLDOBJ ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
-  PyObject *swig_obj[3] ;
+  std::vector< double,std::allocator< double > > *arg1 = 0 ;
+  std::vector< bool,std::allocator< bool > > *arg2 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
   std::vector< double,std::allocator< double > > result;
   
-  if (!SWIG_Python_UnpackTuple(args, "gda_hinge30breaks", 3, 3, swig_obj)) SWIG_fail;
-  ecode1 = SWIG_AsVal_int(swig_obj[0], &val1);
-  if (!SWIG_IsOK(ecode1)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "gda_hinge30breaks" "', argument " "1"" of type '" "int""'");
-  } 
-  arg1 = static_cast< int >(val1);
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
   {
     std::vector< double,std::allocator< double > > *ptr = (std::vector< double,std::allocator< double > > *)0;
-    res2 = swig::asptr(swig_obj[1], &ptr);
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gda_hinge30breaks" "', argument " "2"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    res1 = swig::asptr(swig_obj[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gda_hinge15breaks" "', argument " "1"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
     }
     if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_hinge30breaks" "', argument " "2"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_hinge15breaks" "', argument " "1"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
     }
-    arg2 = ptr;
+    arg1 = ptr;
   }
-  res3 = SWIG_ConvertPtr(swig_obj[2], &argp3, SWIGTYPE_p_std__vectorT_bool_std__allocatorT_bool_t_t,  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "gda_hinge30breaks" "', argument " "3"" of type '" "std::vector< bool,std::allocator< bool > > &""'"); 
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_std__vectorT_bool_std__allocatorT_bool_t_t,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gda_hinge15breaks" "', argument " "2"" of type '" "std::vector< bool,std::allocator< bool > > const &""'"); 
   }
-  if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_hinge30breaks" "', argument " "3"" of type '" "std::vector< bool,std::allocator< bool > > &""'"); 
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_hinge15breaks" "', argument " "2"" of type '" "std::vector< bool,std::allocator< bool > > const &""'"); 
   }
-  arg3 = reinterpret_cast< std::vector< bool,std::allocator< bool > > * >(argp3);
+  arg2 = reinterpret_cast< std::vector< bool,std::allocator< bool > > * >(argp2);
   {
     SWIG_PYTHON_THREAD_BEGIN_ALLOW;
-    result = gda_hinge30breaks(arg1,(std::vector< double,std::allocator< double > > const &)*arg2,*arg3);
+    result = gda_hinge15breaks((std::vector< double,std::allocator< double > > const &)*arg1,(std::vector< bool,std::allocator< bool > > const &)*arg2);
     SWIG_PYTHON_THREAD_END_ALLOW;
   }
   resultobj = swig::from(static_cast< std::vector< double,std::allocator< double > > >(result));
-  if (SWIG_IsNewObj(res2)) delete arg2;
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return resultobj;
 fail:
-  if (SWIG_IsNewObj(res2)) delete arg2;
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return NULL;
 }
 
 
-SWIGINTERN PyObject *_wrap_gda_percentilebreaks(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_gda_hinge15breaks__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
-  int arg1 ;
-  std::vector< double,std::allocator< double > > *arg2 = 0 ;
-  std::vector< bool,std::allocator< bool > > *arg3 = 0 ;
-  int val1 ;
-  int ecode1 = 0 ;
-  int res2 = SWIG_OLDOBJ ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
-  PyObject *swig_obj[3] ;
+  std::vector< double,std::allocator< double > > *arg1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
   std::vector< double,std::allocator< double > > result;
   
-  if (!SWIG_Python_UnpackTuple(args, "gda_percentilebreaks", 3, 3, swig_obj)) SWIG_fail;
-  ecode1 = SWIG_AsVal_int(swig_obj[0], &val1);
-  if (!SWIG_IsOK(ecode1)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "gda_percentilebreaks" "', argument " "1"" of type '" "int""'");
-  } 
-  arg1 = static_cast< int >(val1);
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
   {
     std::vector< double,std::allocator< double > > *ptr = (std::vector< double,std::allocator< double > > *)0;
-    res2 = swig::asptr(swig_obj[1], &ptr);
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gda_percentilebreaks" "', argument " "2"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    res1 = swig::asptr(swig_obj[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gda_hinge15breaks" "', argument " "1"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
     }
     if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_percentilebreaks" "', argument " "2"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_hinge15breaks" "', argument " "1"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
     }
-    arg2 = ptr;
+    arg1 = ptr;
   }
-  res3 = SWIG_ConvertPtr(swig_obj[2], &argp3, SWIGTYPE_p_std__vectorT_bool_std__allocatorT_bool_t_t,  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "gda_percentilebreaks" "', argument " "3"" of type '" "std::vector< bool,std::allocator< bool > > &""'"); 
-  }
-  if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_percentilebreaks" "', argument " "3"" of type '" "std::vector< bool,std::allocator< bool > > &""'"); 
-  }
-  arg3 = reinterpret_cast< std::vector< bool,std::allocator< bool > > * >(argp3);
   {
     SWIG_PYTHON_THREAD_BEGIN_ALLOW;
-    result = gda_percentilebreaks(arg1,(std::vector< double,std::allocator< double > > const &)*arg2,*arg3);
+    result = gda_hinge15breaks((std::vector< double,std::allocator< double > > const &)*arg1);
     SWIG_PYTHON_THREAD_END_ALLOW;
   }
   resultobj = swig::from(static_cast< std::vector< double,std::allocator< double > > >(result));
-  if (SWIG_IsNewObj(res2)) delete arg2;
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return resultobj;
 fail:
-  if (SWIG_IsNewObj(res2)) delete arg2;
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return NULL;
 }
 
 
-SWIGINTERN PyObject *_wrap_gda_stddevbreaks(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_gda_hinge15breaks(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[3] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "gda_hinge15breaks", 0, 2, argv))) SWIG_fail;
+  --argc;
+  if (argc == 1) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< double,std::allocator< double > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_gda_hinge15breaks__SWIG_1(self, argc, argv);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< double,std::allocator< double > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_std__vectorT_bool_std__allocatorT_bool_t_t, SWIG_POINTER_NO_NULL | 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_gda_hinge15breaks__SWIG_0(self, argc, argv);
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'gda_hinge15breaks'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    gda_hinge15breaks(std::vector< double,std::allocator< double > > const &,std::vector< bool,std::allocator< bool > > const &)\n"
+    "    gda_hinge15breaks(std::vector< double,std::allocator< double > > const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_gda_hinge30breaks__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
-  int arg1 ;
-  std::vector< double,std::allocator< double > > *arg2 = 0 ;
-  std::vector< bool,std::allocator< bool > > *arg3 = 0 ;
-  int val1 ;
-  int ecode1 = 0 ;
-  int res2 = SWIG_OLDOBJ ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
-  PyObject *swig_obj[3] ;
+  std::vector< double,std::allocator< double > > *arg1 = 0 ;
+  std::vector< bool,std::allocator< bool > > *arg2 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
   std::vector< double,std::allocator< double > > result;
   
-  if (!SWIG_Python_UnpackTuple(args, "gda_stddevbreaks", 3, 3, swig_obj)) SWIG_fail;
-  ecode1 = SWIG_AsVal_int(swig_obj[0], &val1);
-  if (!SWIG_IsOK(ecode1)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "gda_stddevbreaks" "', argument " "1"" of type '" "int""'");
-  } 
-  arg1 = static_cast< int >(val1);
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
   {
     std::vector< double,std::allocator< double > > *ptr = (std::vector< double,std::allocator< double > > *)0;
-    res2 = swig::asptr(swig_obj[1], &ptr);
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gda_stddevbreaks" "', argument " "2"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    res1 = swig::asptr(swig_obj[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gda_hinge30breaks" "', argument " "1"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
     }
     if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_stddevbreaks" "', argument " "2"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_hinge30breaks" "', argument " "1"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
     }
-    arg2 = ptr;
+    arg1 = ptr;
   }
-  res3 = SWIG_ConvertPtr(swig_obj[2], &argp3, SWIGTYPE_p_std__vectorT_bool_std__allocatorT_bool_t_t,  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "gda_stddevbreaks" "', argument " "3"" of type '" "std::vector< bool,std::allocator< bool > > &""'"); 
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_std__vectorT_bool_std__allocatorT_bool_t_t,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gda_hinge30breaks" "', argument " "2"" of type '" "std::vector< bool,std::allocator< bool > > const &""'"); 
   }
-  if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_stddevbreaks" "', argument " "3"" of type '" "std::vector< bool,std::allocator< bool > > &""'"); 
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_hinge30breaks" "', argument " "2"" of type '" "std::vector< bool,std::allocator< bool > > const &""'"); 
   }
-  arg3 = reinterpret_cast< std::vector< bool,std::allocator< bool > > * >(argp3);
+  arg2 = reinterpret_cast< std::vector< bool,std::allocator< bool > > * >(argp2);
   {
     SWIG_PYTHON_THREAD_BEGIN_ALLOW;
-    result = gda_stddevbreaks(arg1,(std::vector< double,std::allocator< double > > const &)*arg2,*arg3);
+    result = gda_hinge30breaks((std::vector< double,std::allocator< double > > const &)*arg1,(std::vector< bool,std::allocator< bool > > const &)*arg2);
     SWIG_PYTHON_THREAD_END_ALLOW;
   }
   resultobj = swig::from(static_cast< std::vector< double,std::allocator< double > > >(result));
-  if (SWIG_IsNewObj(res2)) delete arg2;
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return resultobj;
 fail:
-  if (SWIG_IsNewObj(res2)) delete arg2;
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gda_hinge30breaks__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< double,std::allocator< double > > *arg1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  std::vector< double,std::allocator< double > > result;
+  
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  {
+    std::vector< double,std::allocator< double > > *ptr = (std::vector< double,std::allocator< double > > *)0;
+    res1 = swig::asptr(swig_obj[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gda_hinge30breaks" "', argument " "1"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_hinge30breaks" "', argument " "1"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    arg1 = ptr;
+  }
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    result = gda_hinge30breaks((std::vector< double,std::allocator< double > > const &)*arg1);
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = swig::from(static_cast< std::vector< double,std::allocator< double > > >(result));
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gda_hinge30breaks(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[3] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "gda_hinge30breaks", 0, 2, argv))) SWIG_fail;
+  --argc;
+  if (argc == 1) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< double,std::allocator< double > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_gda_hinge30breaks__SWIG_1(self, argc, argv);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< double,std::allocator< double > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_std__vectorT_bool_std__allocatorT_bool_t_t, SWIG_POINTER_NO_NULL | 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_gda_hinge30breaks__SWIG_0(self, argc, argv);
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'gda_hinge30breaks'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    gda_hinge30breaks(std::vector< double,std::allocator< double > > const &,std::vector< bool,std::allocator< bool > > const &)\n"
+    "    gda_hinge30breaks(std::vector< double,std::allocator< double > > const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_gda_percentilebreaks__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< double,std::allocator< double > > *arg1 = 0 ;
+  std::vector< bool,std::allocator< bool > > *arg2 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  std::vector< double,std::allocator< double > > result;
+  
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  {
+    std::vector< double,std::allocator< double > > *ptr = (std::vector< double,std::allocator< double > > *)0;
+    res1 = swig::asptr(swig_obj[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gda_percentilebreaks" "', argument " "1"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_percentilebreaks" "', argument " "1"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    arg1 = ptr;
+  }
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_std__vectorT_bool_std__allocatorT_bool_t_t,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gda_percentilebreaks" "', argument " "2"" of type '" "std::vector< bool,std::allocator< bool > > const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_percentilebreaks" "', argument " "2"" of type '" "std::vector< bool,std::allocator< bool > > const &""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< bool,std::allocator< bool > > * >(argp2);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    result = gda_percentilebreaks((std::vector< double,std::allocator< double > > const &)*arg1,(std::vector< bool,std::allocator< bool > > const &)*arg2);
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = swig::from(static_cast< std::vector< double,std::allocator< double > > >(result));
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gda_percentilebreaks__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< double,std::allocator< double > > *arg1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  std::vector< double,std::allocator< double > > result;
+  
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  {
+    std::vector< double,std::allocator< double > > *ptr = (std::vector< double,std::allocator< double > > *)0;
+    res1 = swig::asptr(swig_obj[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gda_percentilebreaks" "', argument " "1"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_percentilebreaks" "', argument " "1"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    arg1 = ptr;
+  }
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    result = gda_percentilebreaks((std::vector< double,std::allocator< double > > const &)*arg1);
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = swig::from(static_cast< std::vector< double,std::allocator< double > > >(result));
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gda_percentilebreaks(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[3] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "gda_percentilebreaks", 0, 2, argv))) SWIG_fail;
+  --argc;
+  if (argc == 1) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< double,std::allocator< double > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_gda_percentilebreaks__SWIG_1(self, argc, argv);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< double,std::allocator< double > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_std__vectorT_bool_std__allocatorT_bool_t_t, SWIG_POINTER_NO_NULL | 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_gda_percentilebreaks__SWIG_0(self, argc, argv);
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'gda_percentilebreaks'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    gda_percentilebreaks(std::vector< double,std::allocator< double > > const &,std::vector< bool,std::allocator< bool > > const &)\n"
+    "    gda_percentilebreaks(std::vector< double,std::allocator< double > > const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_gda_stddevbreaks__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< double,std::allocator< double > > *arg1 = 0 ;
+  std::vector< bool,std::allocator< bool > > *arg2 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  std::vector< double,std::allocator< double > > result;
+  
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  {
+    std::vector< double,std::allocator< double > > *ptr = (std::vector< double,std::allocator< double > > *)0;
+    res1 = swig::asptr(swig_obj[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gda_stddevbreaks" "', argument " "1"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_stddevbreaks" "', argument " "1"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    arg1 = ptr;
+  }
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_std__vectorT_bool_std__allocatorT_bool_t_t,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gda_stddevbreaks" "', argument " "2"" of type '" "std::vector< bool,std::allocator< bool > > const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_stddevbreaks" "', argument " "2"" of type '" "std::vector< bool,std::allocator< bool > > const &""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< bool,std::allocator< bool > > * >(argp2);
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    result = gda_stddevbreaks((std::vector< double,std::allocator< double > > const &)*arg1,(std::vector< bool,std::allocator< bool > > const &)*arg2);
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = swig::from(static_cast< std::vector< double,std::allocator< double > > >(result));
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gda_stddevbreaks__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< double,std::allocator< double > > *arg1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  std::vector< double,std::allocator< double > > result;
+  
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  {
+    std::vector< double,std::allocator< double > > *ptr = (std::vector< double,std::allocator< double > > *)0;
+    res1 = swig::asptr(swig_obj[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gda_stddevbreaks" "', argument " "1"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gda_stddevbreaks" "', argument " "1"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    arg1 = ptr;
+  }
+  {
+    SWIG_PYTHON_THREAD_BEGIN_ALLOW;
+    result = gda_stddevbreaks((std::vector< double,std::allocator< double > > const &)*arg1);
+    SWIG_PYTHON_THREAD_END_ALLOW;
+  }
+  resultobj = swig::from(static_cast< std::vector< double,std::allocator< double > > >(result));
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gda_stddevbreaks(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[3] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "gda_stddevbreaks", 0, 2, argv))) SWIG_fail;
+  --argc;
+  if (argc == 1) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< double,std::allocator< double > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_gda_stddevbreaks__SWIG_1(self, argc, argv);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector< double,std::allocator< double > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_std__vectorT_bool_std__allocatorT_bool_t_t, SWIG_POINTER_NO_NULL | 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_gda_stddevbreaks__SWIG_0(self, argc, argv);
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'gda_stddevbreaks'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    gda_stddevbreaks(std::vector< double,std::allocator< double > > const &,std::vector< bool,std::allocator< bool > > const &)\n"
+    "    gda_stddevbreaks(std::vector< double,std::allocator< double > > const &)\n");
+  return 0;
 }
 
 
