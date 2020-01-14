@@ -9,4 +9,4 @@ class TestClassify(unittest.TestCase):
         self.crm_prp = self.guerry.GetIntegerCol("Crm_prp")
 
     def test_stddev_breaks(self):
-        pass
+        pygeoda.stddev_breaks(self.crm_prp)
