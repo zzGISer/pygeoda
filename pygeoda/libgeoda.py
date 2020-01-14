@@ -1940,8 +1940,8 @@ def gda_standardize_mad(data):
 def gda_naturalbreaks(*args):
     return _libgeoda.gda_naturalbreaks(*args)
 
-def gda_guantilebreaks(*args):
-    return _libgeoda.gda_guantilebreaks(*args)
+def gda_quantilebreaks(*args):
+    return _libgeoda.gda_quantilebreaks(*args)
 
 def gda_hinge15breaks(*args):
     return _libgeoda.gda_hinge15breaks(*args)
